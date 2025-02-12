@@ -23,6 +23,7 @@ namespace esphome
       Left = 1,
       Middle = 4,
       Right = 7,
+      Fourth = 9,
       TwoFinger = 11,
       DraggedLTR = 12,
       DraggedRTL = 13
@@ -39,6 +40,7 @@ namespace esphome
       binary_sensor::BinarySensor *left = new binary_sensor::BinarySensor();
       binary_sensor::BinarySensor *middle = new binary_sensor::BinarySensor();
       binary_sensor::BinarySensor *right = new binary_sensor::BinarySensor();
+      binary_sensor::BinarySensor *fourth = new binary_sensor::BinarySensor();
       binary_sensor::BinarySensor *two_finger = new binary_sensor::BinarySensor();
       binary_sensor::BinarySensor *dragged_ltr = new binary_sensor::BinarySensor();
       binary_sensor::BinarySensor *dragged_rtl = new binary_sensor::BinarySensor();
@@ -56,7 +58,10 @@ namespace esphome
           right, // 7-10 is right
           right,
           right,
-          right,
+          fourth,
+          fourth,
+          fourth,
+
           two_finger,  // 11 is two fingers (released only)
           dragged_ltr, // 12 is drag left to right
           dragged_rtl, // 13 is drag right to left
